@@ -1,1 +1,4 @@
 venv
+.vscode
+
+task_cli.egg-info

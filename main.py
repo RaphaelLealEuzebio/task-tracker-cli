@@ -11,21 +11,23 @@ def main ():
     if not args:
         print("Usar: task-cli <command> [args]")
         return
+    
     command = args[0]
 
     match command:
         case "add":
-
+            
+            #instanciar classe
         case "update":
-
+            #instanciar classe
         case "delete":
-        
+            #instanciar classe
         case "mark-in-progress":
-        
+            #instanciar classe
         case "mark-done":
-        
+            #instanciar classe
         case "list":
-        
+            #instanciar classe
         case _:
             print(f"Comando desconhecido: '{command}' ")
 if __name__ == "__main__":
