@@ -1,13 +1,11 @@
-import json
 import sys
-import os
-from datetime import datetime
+from src.task.create_task import Create
+from src.task.list_task import Listar
 
 DB_FILE = "tasks.json"
 
 def main ():
     args = sys.argv[1:]
-    
     if not args:
         print("Usar: task-cli <command> [args]")
         return
@@ -16,20 +14,20 @@ def main ():
 
     match command:
         case "add":
-            
-            #instanciar classe
-        case "update":
-            #instanciar classe
-        case "delete":
-            #instanciar classe
-        case "mark-in-progress":
-            #instanciar classe
-        case "mark-done":
-            #instanciar classe
+            task = Create.adicionar()
+    #         #instanciar classe
+    #     case "update":
+    #         #instanciar classe
+    #     case "delete":
+    #         #instanciar classe
+    #     case "mark-in-progress":
+    #         #instanciar classe
+    #     case "mark-done":
+    #         #instanciar classe
         case "list":
-            #instanciar classe
-        case _:
-            print(f"Comando desconhecido: '{command}' ")
+            lista = Listar.listar()
+    #     case _:
+    #         print(f"Comando desconhecido: '{command}' ")
 if __name__ == "__main__":
     main()
 # import argparse
