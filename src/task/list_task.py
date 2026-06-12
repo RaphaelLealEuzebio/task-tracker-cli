@@ -10,5 +10,6 @@ class Listar():
 
     def listar(data=os.getenv("TASK_DATA")):
         with open (data) as file:
+            
             dados = json.load(file)
-            print(dados)
+            print(json.dumps(dados, indent=4))

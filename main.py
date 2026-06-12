@@ -1,9 +1,7 @@
 import sys
 from src.task.create_task import Create
 from src.task.list_task import Listar
-
-DB_FILE = "tasks.json"
-
+from constants.constants import NOVA_TASK
 def main ():
     args = sys.argv[1:]
     if not args:
@@ -14,7 +12,8 @@ def main ():
 
     match command:
         case "add":
-            task = Create.adicionar()
+            task = Create(NOVA_TASK)
+            task.adicionar_task()
     #         #instanciar classe
     #     case "update":
     #         #instanciar classe
@@ -30,15 +29,3 @@ def main ():
     #         print(f"Comando desconhecido: '{command}' ")
 if __name__ == "__main__":
     main()
-# import argparse
-
-# def main():
-#     parser = argparse.ArgumentParser(description="taskcli")
-
-#     parser.add_argument("nome", help="meu nome")
-#     args = parser.parse_args()
-#     mensagem = f"Olá {args.nome} !!!"
-
-#     print(mensagem)
-# if __name__ == "taskcli":
-#     main()
