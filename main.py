@@ -1,6 +1,6 @@
 import sys
 from src.task.create_task import Create
-from src.task.list_task import Listar
+# from src.task.list_task import Listar
 from constants.constants import NOVA_TASK
 def main ():
     args = sys.argv[1:]
@@ -13,7 +13,7 @@ def main ():
     match command:
         case "add":
             task = Create(NOVA_TASK)
-            task.adicionar_task()
+            task._lerArquivo()
     #         #instanciar classe
     #     case "update":
     #         #instanciar classe
@@ -23,9 +23,10 @@ def main ():
     #         #instanciar classe
     #     case "mark-done":
     #         #instanciar classe
-        case "list":
-            lista = Listar.listar()
+    #     case "list":
+              # lista = Listar.listar()
     #     case _:
     #         print(f"Comando desconhecido: '{command}' ")
+
 if __name__ == "__main__":
     main()
